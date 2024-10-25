@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 300px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+button#marked {
+    margin-left: 20px;
+}
+
+.bought {
+    margin-left: 20px;
+    color: gray;
+    text-decoration: line-through;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #ddd;
+}
