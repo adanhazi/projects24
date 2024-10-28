@@ -13,18 +13,6 @@ function renderItem(itemText, isBought = false){
    itemSelf.appendChild(itemTextSpan);
    itemSelf.appendChild(itemButton);
 
-
-   itemSelf.addEventListener('click', function (){
-    this.remove();
-    saveList();
-   });
-
-   itemButton.addEventListener('click', function(event){
-    event.stopPropagation();
-    itemTextSpan.classList.toggle('bought');
-    saveList();
-   });
-
    const itemList = document.getElementById('item-list');
    itemList.appendChild(itemSelf);
 
@@ -51,6 +39,25 @@ function addItem(itemText) {
     renderItem(itemText);
     saveList();
 }
+
+document.getElementById('item-list').addEventListener('click', function(event){
+    const itemSelf = event.target.closest('li');
+
+    if(!itemSelf) return;
+
+    if (event.target.id === 'marked'){
+        const itemTextSpan = itemSelf.querySelector('span');
+        itemTextSpan.classList.toggle('bought');
+        saveList();
+    }
+
+    else if (event.target === itemSelf){
+        if (confirm('Are you sure you want to remove this item?')){
+            itemSelf.remove();
+            saveList();
+        }
+    }
+});
 
 document.addEventListener('DOMContentLoaded', loadList);
 
