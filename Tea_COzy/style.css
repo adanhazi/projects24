@@ -5,6 +5,7 @@ body {
     background-color: black;
     opacity: 0.9;
     text-align: center;
+    margin-left: 20px;
 }
 header{
     display: flex;
@@ -45,16 +46,36 @@ nav ul li{
 .text{
     background-color: black;
 }
+.tea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 .cards{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 1000px;
     justify-content: center;
-    align-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0px;
 }
 .card img{
     height: 200px;
     width: 300px;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers image & caption inside each card */
+    text-align: center;
+    width: 300px;
+}
+h2, h4{
+    margin-bottom: 10px;
 }
