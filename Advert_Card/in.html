@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Advertising Flyer for Print</title>
+    <title>Stylish Flyer with Centered Photo and Line Boxes</title>
     <style>
         /* General styling */
         body {
-            font-family: Arial, sans-serif;
-            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             background-color: #f3f3f3;
             display: flex;
             justify-content: center;
@@ -17,65 +16,72 @@
             margin: 0;
         }
         .flyer {
-            width: 100%;
-            max-width: 600px;
+            width: 700px;
             background: #1e3a8a;
             color: #fff;
-            padding: 30px;
+            padding: 40px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-        }
-
-        /* Header with photo */
-        .header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 25px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
             position: relative;
         }
-        .header img {
-            width: 120px;
-            height: 120px;
+
+        /* Centered photo styling */
+        .center-photo {
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            border: 4px solid #fff;
-            margin-bottom: 10px;
+            border: 5px solid #fff;
+            background: #fff;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
         }
-        .header h1 {
-            margin: 10px 0;
+        .center-photo img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+        .header-text {
+            margin-top: 240px;
             font-size: 24px;
             font-weight: bold;
             color: #ffeb3b;
-        }
-        .header h2 {
-            font-size: 18px;
-            font-weight: 300;
-            margin: 5px 0;
-            color: #ffeb3b;
+            position: relative;
+            z-index: 5;
         }
 
-        /* Services grid */
+        /* Line boxes for services */
         .services-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            padding-top: 220px;
+            gap: 10px;
         }
         .service-item {
-            width: 140px;
-            text-align: center;
-            padding: 15px;
-            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            border-radius: 25px;
             color: #fff;
             font-size: 14px;
+            background: #3f51b5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: background 0.3s ease;
         }
         .service-item i {
-            font-size: 30px;
-            margin-bottom: 10px;
-            display: block;
+            font-size: 18px;
+            margin-right: 8px;
         }
         .service1 { background-color: #ff9800; }
         .service2 { background-color: #4caf50; }
@@ -89,8 +95,10 @@
         /* Contact Information */
         .contact-info {
             font-size: 14px;
-            margin-top: 30px;
+            margin-top: 20px;
             color: #ffeb3b;
+            position: relative;
+            z-index: 5;
         }
         .contact-info a {
             color: #ffeb3b;
@@ -103,58 +111,51 @@
             margin-top: 20px;
             font-size: 14px;
             color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            z-index: 5;
         }
     </style>
 </head>
 <body>
 
 <div class="flyer">
-    <!-- Header with photo -->
-    <div class="header">
-        <img src="your-photo.jpg" alt="Your Photo">
-        <h1>Haziadan Web Solutions</h1>
-        <h2>Empowering Your Digital Presence</h2>
+    <!-- Centered Photo -->
+    <div class="center-photo">
+        <img src="./images/hazi2.jpeg" alt="Your Photo">
     </div>
+    <div class="header-text">Haziadan Web Solutions</div>
 
-    <!-- Services section with icons -->
+    <!-- Line-style services around the photo -->
     <div class="services-container">
         <div class="service-item service1">
-            <i>🖥️</i>
-            Website Design & Development
+            <i>🖥️</i> Website Design and Development
         </div>
         <div class="service-item service2">
-            <i>📄</i>
-            Single Page Applications (SPA)
+            <i>📄</i> Single Page Applications (SPA)
         </div>
         <div class="service-item service3">
-            <i>🛒</i>
-            E-commerce Solutions
+            <i>🛒</i> E-commerce Solutions
         </div>
         <div class="service-item service4">
-            <i>🌐</i>
-            Domain Registration
+            <i>🌐</i> Domain Registration
         </div>
         <div class="service-item service5">
-            <i>📡</i>
-            Hosting Services
+            <i>📡</i> Hosting Services
         </div>
         <div class="service-item service6">
-            <i>🔧</i>
-            Website Maintenance
+            <i>🔧</i> Website Maintenance and Support
         </div>
         <div class="service-item service7">
-            <i>🔌</i>
-            API Development
+            <i>🔌</i> API Development and Integration
         </div>
         <div class="service-item service8">
-            <i>🚀</i>
-            SEO & Performance
+            <i>🚀</i> SEO and Performance Optimization
         </div>
     </div>
 
     <!-- Contact Information -->
     <div class="contact-info">
-        <p>Visit us: <strong>haziadan.com</strong></p>
+        <p>Visit us: <strong>www.haziadan.com</strong></p>
         <p>Email: <a href="mailto:admin@haziadan.com">admin@haziadan.com</a></p>
     </div>
 
