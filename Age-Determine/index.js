@@ -14,8 +14,7 @@ myBtn.onclick = () => {
     resultElement.textContent = `You old enough to enter this site`;
   } else if (age < 0){
     resultElement.textContent = `You can't be below 0`;
-  } else if (age == 25){
-    resultElement.textContent = `This is just for Sween`
-  }
+  } else {
     resultElement.textContent = `You must be 18+ to enter this site`;
   }
+}
