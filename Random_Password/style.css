@@ -1,0 +1,32 @@
+body{
+  font-family: verdana;
+  font-size: 1.5rem;
+}
+#container{
+  text-align: center;
+  background-color: rgba(166, 165, 157, 0.947);
+  width: 700px;
+  height: 200px;
+  margin: auto;
+}
+#textBox{
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+button{
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: hsl(210, 100%, 50%);
+  color: white;
+}
+button:hover{
+  background-color: hsl(210, 100%, 60%);
+}
+button:active{
+  background-color: hsl(210, 100%, 70%);
+}
