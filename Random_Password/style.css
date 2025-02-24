@@ -6,7 +6,7 @@ body{
   text-align: center;
   background-color: rgba(166, 165, 157, 0.947);
   width: 700px;
-  height: 200px;
+  height: 350px;
   margin: auto;
 }
 #textBox{
@@ -29,4 +29,31 @@ button:hover{
 }
 button:active{
   background-color: hsl(210, 100%, 70%);
+}
+.slider{
+  appearance: none;
+  width: 50px;
+  height: 26px;
+  background-color: #ccc;
+  border-radius: 34px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+.slider::before{
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.slider:checked{
+  background-color: #4CAF50;
+}
+.slider:checked::before{
+  transform: translateX(24px);
 }

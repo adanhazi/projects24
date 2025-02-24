@@ -12,6 +12,22 @@
     <label>Generated Password: </label>
     <input type="text" id="textBox">
     <button id="genBtn" onclick="passwordGenerator()">Generate</button>
+
+    <label for="length">Password Length</label>
+    <input type="number" min="0" id="length"><br><br>
+
+    <label for="lowerCaseBtn">Include Lower Case</label>
+    <input type="checkbox" id="lowerCaseBtn" class="slider"><br>
+
+    <label for="upperCaseBtn">Include Upper Case</label>
+    <input type="checkbox" id="upperCaseBtn" class="slider"><br>
+
+    <label for="numbersBtn">Include Numbers</label>
+    <input type="checkbox" id="numbersBtn" class="slider"><br>
+
+    <label for="symbolsBtn">Symbols</label>
+    <input type="checkbox" id="symbolsBtn" class="slider">
+
     <p id="result"></p>
   </section>
 
