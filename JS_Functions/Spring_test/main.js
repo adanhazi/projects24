@@ -34,3 +34,20 @@ function isPangram(str) {
   }
   return true
 }
+
+function strExpand(str) {
+  const freq = {};
+for (const char of str) {
+  freq[char] = (freq[char] || 0) + 1;
+}
+let result = "";
+const processed = new Set();
+for (const char of str) {
+  if (!processed.has(char)) {
+    result += char + freq[char];
+    processed.add(char);
+  }
+}
+
+return result;
+}
