@@ -22,3 +22,15 @@ function vowelsOnly(str) {
   }
   return vowels;
 }
+
+function isPangram(str) {
+  let letters = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < letters.length; i++){
+      if(str.includes(letters[i])){
+          continue
+      } else {
+          return false
+      }
+  }
+  return true
+}
