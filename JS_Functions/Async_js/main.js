@@ -34,3 +34,48 @@ setTimeout(() => {
   }
 }, delay);
 }
+//Exercise 1
+function simulateAsyncTask(delay) {
+  // Your code here
+  setTimeout(() => {
+      return new Promise((resolve, reject) => {
+        resolve("Task completed after {delay}ms")  
+      })
+  }, delay)
+}
+//Exercise 2
+function simulateFailure(delay) {
+  // Your code here
+   setTimeout(() => {
+      return new Promise((resolve, reject) => {
+        reject("Task failed after {delay}ms")  
+      })
+  }, delay)
+}
+//Exercise 3
+function chainTasks() {
+  // Your code here
+  const task1 = new Promise((resolve) =>{
+      resolve("Task 1 complete")
+  });
+  const task2 = new Promise((resolve) =>{
+      resolve("Task 2 complete")
+  });
+  const task3 = new Promise((resolve) =>{
+      resolve("Task 3 complete")
+  });
+  
+  task1
+  .then((result1) =>{
+      console.log(result1);
+      return task2;
+  })
+  .then((result2) =>{
+      console.log(result2);
+      return task3;
+  })
+  .then((result3) =>{
+      console.log(result3)
+  })
+}
+//exercise 4
