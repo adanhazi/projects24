@@ -12,3 +12,25 @@ doTask('task 1', () => {
       });
   });
 });
+
+function greeting (name, callback){
+  console.log(`Hello ${name}`);
+  if (callback) callback(name);
+}
+function isFunc(onlyParameter){
+  if (typeof onlyParameter === 'function'){
+      onlyParameter();
+  } else {
+      console.log('no valid callback was provided');
+  }
+}
+function simulateTask(taskName, delay, callback) {
+setTimeout(() => {
+  console.log(`${taskName} complete`);
+  if (callback) {
+    callback();
+  } else {
+    console.log("No further action.");
+  }
+}, delay);
+}
