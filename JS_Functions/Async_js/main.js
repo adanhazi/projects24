@@ -43,3 +43,12 @@ function simulateAsyncTask(delay) {
       })
   }, delay)
 }
+//Exercise 2
+function simulateFailure(delay) {
+  // Your code here
+   setTimeout(() => {
+      return new Promise((resolve, reject) => {
+        reject("Task failed after {delay}ms")  
+      })
+  }, delay)
+}
