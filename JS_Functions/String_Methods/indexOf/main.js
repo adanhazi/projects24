@@ -51,3 +51,15 @@ function countOccurrences(str, sub) {
   }
   return count;
 }
+
+/*
+Challenge 5: Safe IndexOf
+Implement safeIndexOf(str, search, from) that returns -1 if either str or search isn't a string; otherwise returns str.indexOf(search, from).
+*/
+//Solutions
+function safeIndexOf(str, search, from) {
+  if (typeof str !== 'string' || typeof search !== 'string'){
+      return -1;
+  }
+  return str.indexOf(search, from);
+}
