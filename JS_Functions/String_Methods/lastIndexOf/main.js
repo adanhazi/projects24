@@ -22,3 +22,14 @@ function limitedLastIndexOf(str, sub, limit) {
     return -1
   return str.lastIndexOf(sub, limit);
 }
+
+/*
+Challenge 3: Is Substring at End
+Write endsWithSub(str, sub) that returns true if str ends with sub, but without using .endsWith(). Use .lastIndexOf() to check.
+*/
+//Solutions
+function endsWithSub(str, sub) {
+  let index = str.lastIndexOf(sub);
+  return index !== -1 && index === str.length - sub.length;
+}
+
