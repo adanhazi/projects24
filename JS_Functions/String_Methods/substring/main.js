@@ -19,4 +19,15 @@ function removeFirstN(str, n) {
   return str.substring(n);
 }
 
+/*
+Challenge 3: Keep Last N
+Implement keepLastN(str, n) that returns only the last n characters. If n ≤ 0, return ""; if n ≥ str.length, return the full string.
+*/
+// Solution
+function keepLastN(str, n) {
+  if (n <= 0) return "";
+  if (n >= str.length) return str;
+  let len = str.length;
+  return str.substring(len - n)
+}
 
