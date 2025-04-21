@@ -49,3 +49,13 @@ function countOverlapping(str, sub) {
   return count
 }
 
+/*
+Challenge 5: Safe LastIndexOf
+Implement safeLastIndexOf(str, search, from) that returns -1 if str or search isn’t a string; otherwise str.lastIndexOf(search, from).
+*/
+//Solutions
+function safeLastIndexOf(str, search, from) {
+  if (typeof str !== 'string' || typeof search !== 'string')
+     return -1;
+  return str.lastIndexOf(search, from);
+ }
