@@ -36,3 +36,18 @@ Create isAtPosition(str, sub, pos) that returns true if str contains sub startin
 function isAtPosition(str, sub, pos) {
   return str.indexOf(sub, pos) === pos;
 }
+
+/*
+Challenge 4: Count Substring Occurrences
+Write countOccurrences(str, sub) that returns the number of times sub appears in str. Use .indexOf() in a loop.
+*/
+//Solutions
+function countOccurrences(str, sub) {
+  let count = 0;
+  let pos = str.indexOf(sub);
+  while (pos !== -1){
+      pos = str.indexOf(sub, pos + 1);
+      count += 1;
+  }
+  return count;
+}
