@@ -46,3 +46,12 @@ const middle = char.repeat(len - 2*numVisible);
 return start + middle + end;
 }
 
+/*
+Challenge 5: Prefix/Suffix Checker
+Implement betweenIndices(str, sub, start, end) that returns true if sub occurs entirely between start and end (exclusive), otherwise false.
+*/
+// Solution
+function betweenIndices(str, sub, start, end) {
+  const segment = str.substring(start, end);
+  return segment.includes(sub);
+}
