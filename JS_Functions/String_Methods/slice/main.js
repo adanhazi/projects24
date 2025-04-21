@@ -45,3 +45,16 @@ function swapHalves(str) {
   return right + middle + left;
 }
 }
+
+/*
+Challenge 5: Custom Truncate
+Build truncate(str, maxLen) that returns the first maxLen characters followed by "..." if str.length > maxLen, otherwise returns str unchanged.
+*/
+// Solutions
+function truncate(str, maxLen) {
+  if (str.length > maxLen){
+      str = str.slice(0, maxLen) + '...';
+      return str;
+  }
+  return str;
+}
