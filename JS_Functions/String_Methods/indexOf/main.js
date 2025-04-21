@@ -27,3 +27,12 @@ function lastOccurrence(str, sub) {
 }
   return lastPos;
 }
+
+/*
+Challenge 3: Is Substring at Position
+Create isAtPosition(str, sub, pos) that returns true if str contains sub starting exactly at index pos, otherwise false. Use .indexOf().
+*/
+//Solution
+function isAtPosition(str, sub, pos) {
+  return str.indexOf(sub, pos) === pos;
+}
