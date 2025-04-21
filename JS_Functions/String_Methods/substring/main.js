@@ -31,3 +31,18 @@ function keepLastN(str, n) {
   return str.substring(len - n)
 }
 
+/*
+Challenge 4: Mask Middle
+Write maskMiddle(str, numVisible) that replaces all but the first and last numVisible characters with '*'. If string too short, return str unchanged.
+*/
+// Solution
+function maskMiddle(str, numVisible) {
+  let len = str.length;
+  let char = '*'
+if (len <= 2*numVisible) return str;
+const start = str.substring(0, numVisible);
+const end = str.substring(len - numVisible);
+const middle = char.repeat(len - 2*numVisible);
+return start + middle + end;
+}
+
