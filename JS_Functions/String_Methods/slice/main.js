@@ -27,3 +27,21 @@ function removeChars(str, n) {
     return "";
   return str.slice(n, -n)
 }
+
+/*
+Challenge 4: Slice and Swap
+Write swapHalves(str) that splits the string in half and swaps the halves. If odd length, the extra character stays in the middle.
+*/
+// Solutions
+function swapHalves(str) {
+  const len = str.length;
+  const half = Math.floor(len/2);
+  if (len % 2 === 0){
+    return str.slice(half) + str.slice(0, half)
+} else {
+  const left = str.slice(0, half);
+  const middle = str.charAt(half);
+  const right = str.slice(half+1);
+  return right + middle + left;
+}
+}
