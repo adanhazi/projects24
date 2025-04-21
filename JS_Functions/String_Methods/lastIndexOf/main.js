@@ -11,3 +11,14 @@ function lastVowelIndex(str) {
   .filter(pos => pos !== -1);
   return positions.length ? Math.max(...positions) : -1;
 }
+
+/*
+Challenge 2: Last Occurrence with Limit
+Implement limitedLastIndexOf(str, sub, limit) that returns the last index of sub at or before limit. If limit is out of range (<0), return -1.
+*/
+//Solutions
+function limitedLastIndexOf(str, sub, limit) {
+  if (limit < 0)
+    return -1
+  return str.lastIndexOf(sub, limit);
+}
