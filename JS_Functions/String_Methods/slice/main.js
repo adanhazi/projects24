@@ -16,3 +16,14 @@ function middleThird(str) {
   let thirdLength = Math.floor(str.length / 3)
   return str.slice(thirdLength, 2*thirdLength);
 }
+
+/*
+Challenge 3: Remove N Characters
+Implement removeChars(str, n) that removes n characters from the start and n from the end. If 2n ≥ str.length, return "".
+*/
+// Solutions
+function removeChars(str, n) {
+  if (str.length <= 2*n)
+    return "";
+  return str.slice(n, -n)
+}
