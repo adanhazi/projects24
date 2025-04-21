@@ -33,3 +33,19 @@ function endsWithSub(str, sub) {
   return index !== -1 && index === str.length - sub.length;
 }
 
+/*
+Challenge 4: Count Overlapping with LastIndexOf
+Write countOverlapping(str, sub) that counts all (including overlapping) occurrences of sub in str. Use a combination of .lastIndexOf() in a loop, searching backward.
+*/
+//Solutions
+function countOverlapping(str, sub) {
+  let count = 0;
+  let pos = str.lastIndexOf(sub);
+  let step = sub.length - 1;
+  while (pos !== -1){
+      count++;
+      pos = str.lastIndexOf(sub, pos - step);
+  }
+  return count
+}
+
