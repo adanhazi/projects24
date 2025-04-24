@@ -26,3 +26,14 @@ function getFileExtension(filename) {
   }
   return "";
 }
+
+/*
+Write splitIntoChunks(str, size) that breaks a string into an array of substrings each of length size. The last chunk may be shorter if str.length isn’t a multiple of size.
+*/
+function splitIntoChunks(str, size) {
+  const chunks = [];
+  for (let i = 0; i < str.length; i += size) {
+    chunks.push(str.substring(i, i + size));
+  }
+  return chunks;
+}
