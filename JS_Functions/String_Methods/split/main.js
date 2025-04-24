@@ -37,3 +37,13 @@ function splitIntoChunks(str, size) {
   }
   return chunks;
 }
+
+/*
+Create a function that reverses the order of words in a sentence. Words are separated by one or more spaces; the returned string should have exactly one space between words and no leading/trailing spaces.
+*/
+function reverseWords(sentence) {
+  const words = sentence
+    .trim()
+    .split(/\s+/);
+  return words.reverse().join(" ");
+}
