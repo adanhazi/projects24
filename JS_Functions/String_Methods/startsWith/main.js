@@ -47,3 +47,15 @@ function validateUsername(username) {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("");
   return letters.some(letter => username.startsWith(letter));
 }
+
+/*
+Challenge 5: safeStartsWith(str, search, pos)
+Return false if either str or search isn’t a string; otherwise behave like .startsWith().
+*/
+
+//Solutions
+
+function safeStartsWith(str, search, pos) {
+  if (typeof str !== 'string' || typeof search !== 'string') return false;
+  return str.startsWith(search, pos);
+}
