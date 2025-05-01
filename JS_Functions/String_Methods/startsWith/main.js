@@ -19,3 +19,18 @@ Return true if str has prefix starting exactly at index pos.
 function isValidPrefix(str, prefix, pos) {
   return str.startsWith(prefix, pos);
 }
+
+/*
+Challenge 3: removePrefix(str, prefix)
+If str starts with prefix, return the string without it; otherwise return str unchanged.
+*/
+
+//Solutions
+
+function removePrefix(str, prefix) {
+  if (str.startsWith(prefix)){
+      return str.substring(prefix.length);
+  } else {
+      return str;
+  }
+}
