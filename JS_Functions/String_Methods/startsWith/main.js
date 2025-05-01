@@ -34,3 +34,16 @@ function removePrefix(str, prefix) {
       return str;
   }
 }
+
+/*
+Challenge 4: validateUsername(username)
+A valid username must start with a letter (A–Z or a–z). Return true if valid, false otherwise.
+Hint: Use .startsWith() combined with checking the first character code.
+*/
+
+//Solutions
+
+function validateUsername(username) {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split("");
+  return letters.some(letter => username.startsWith(letter));
+}
