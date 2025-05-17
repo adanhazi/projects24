@@ -31,3 +31,13 @@ export default function PackingList() {
     </section>
   );
 }
+
+/*
+Challenge 2 of 3: Show the item importance with && 
+In this example, each Item receives a numerical importance prop. Use the && operator to render “(Importance: X)” in italics, but only for items that have non-zero importance. Your item list should end up looking like this:
+
+Space suit (Importance: 9)
+Helmet with a golden leaf
+Photo of Tam (Importance: 6)
+Don’t forget to add a space between the two labels!
+*/
