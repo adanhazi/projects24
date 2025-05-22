@@ -14,3 +14,7 @@ export default function Gallery() {
   function handleNextClick() {
     setIndex(index + 1);
   }
+
+  function handleMoreClick() {
+    setShowMore(!showMore);
+  }
