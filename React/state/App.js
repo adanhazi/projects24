@@ -18,3 +18,13 @@ export default function Gallery() {
   function handleMoreClick() {
     setShowMore(!showMore);
   }
+let sculpture = sculptureList[index];
+  return (
+    <>
+      <button onClick={handleNextClick}>
+        Next
+      </button>
+      <h2>
+        <i>{sculpture.name} </i> 
+        by {sculpture.artist}
+      </h2>
