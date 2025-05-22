@@ -4,3 +4,9 @@ When you press “Next” on the last sculpture, the code crashes. Fix the logic
 
 After fixing the crash, add a “Previous” button that shows the previous sculpture. It shouldn’t crash on the first sculpture.
 */
+import { useState } from 'react';
+import { sculptureList } from './data.js';
+
+export default function Gallery() {
+  const [index, setIndex] = useState(0);
+  const [showMore, setShowMore] = useState(false);
